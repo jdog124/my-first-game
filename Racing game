@@ -1,0 +1,30 @@
+//Start of the game
+
+//Welcome message
+console.log("Welcome to the racing game!");
+
+//Declare race track variables
+let raceTrackLength = 50;
+let racePosition1 = 0;
+let racePosition2 = 0;
+
+//Inform user of race track length
+console.log("The race track is " + raceTrackLength + " meters long");
+
+//Game loop
+while (racePosition1 < raceTrackLength && racePosition2 < raceTrackLength) {
+
+  //Generate random numbers for race positions
+  racePosition1 += Math.floor(Math.random() * 10);
+  racePosition2 += Math.floor(Math.random() * 10);
+
+  //Print updates of race positions
+  console.log("Car 1 is at position " + racePosition1 + " and car 2 is at position " + racePosition2);
+
+}
+
+//Winning message
+if (racePosition1 >= raceTrackLength && racePosition2 >= raceTrackLength) {
+  console.log("It's a tie!");
+} else if (racePosition1 >= raceTrackLength) {
+  console.log("Car 1 wins
